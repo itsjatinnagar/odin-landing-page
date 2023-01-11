@@ -95,3 +95,39 @@ body {
     border-radius: 6px;
     font-size: 18px;
 }
+
+.information-wrapper {
+    padding-block: 40px;
+}
+
+.information-wrapper h2 {
+    font-size: 36px;
+    font-weight: 900;
+    color: #1f2937;
+    text-align: center;
+}
+
+.card-wrapper {
+    margin-block: 30px;
+    display: flex;
+    justify-content: center;
+    column-gap: 30px;
+}
+
+.card {
+    width: 200px;
+}
+
+.card .image {
+    width: 100%;
+    height: 200px;
+    border: 5px solid #3882f6;
+    border-radius: 20px;
+}
+
+.card p {
+    font-size: 20px;
+    color: #6d747e;
+    text-align: center;
+    margin-top: 6px;
+}
