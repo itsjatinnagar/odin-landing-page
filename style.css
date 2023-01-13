@@ -2,6 +2,9 @@
 
 :root {
     --dark-background: #1f2937;
+    --dark-heading: #f9faf8;
+    --whitish-gray: #e5e7eb;
+    --primary: #3882f6;
 }
 
 * {
@@ -30,36 +33,68 @@ body {
 
 .hero {
     background-color: var(--dark-background);
-    color: #f9faf8;
+    color: var(--dark-heading);
+}
+
+.container {
+    max-width: 1100px;
+    width: 100%;
+    margin: auto;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn {
+    padding: 8px 20px;
+    background-color: var(--primary);
+    color: #fff;
+    border: 2px solid;
+    border-radius: 6px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.btn.primary {
+    margin-top: 10px;
+    border-color: var(--primary);
+}
+
+.btn.secondary {
+    padding: 6px 30px;
+    border-color: #fff;
 }
 
 .navbar,
-.header {
-    max-width: 1100px;
-    margin: auto;
+.nav-links,
+.cta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .navbar,
 .nav-links {
     padding: 10px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
 .nav-links {
     column-gap: 20px;
 }
 
-.nav-links a {
-    color: #e5e7eb;
+.nav-links a,
+.header p {
+    color: var(--whitish-gray);
     font-size: 18px;
 }
 
 .header {
-    padding: 100px 0;
+    padding-block: 100px;
     display: flex;
-    column-gap: 40px;
+    column-gap: 30px;
 }
 
 .header .left,
@@ -70,54 +105,26 @@ body {
 .header h1 {
     font-size: 48px;
     font-weight: 900;
-    color: #f9faf8;
+    color: var(--dark-heading);
 }
 
-.header p {
-    font-size: 18px;
-    color: #e5e7eb;
-}
-
-.right .image {
-    width: 100%;
-    height: 100%;
-    background-color: #6d747e;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.btn {
-    margin-top: 10px;
-    padding: 8px 20px;
-    background-color: #3882f6;
-    color: #fff;
-    border: 2px solid #3882f6;
-    border-radius: 6px;
-    font-size: 18px;
-    cursor: pointer;
-}
-
-.secondary {
-    padding: 6px 30px;
-    border-color: #fff;
+.header .right {
+    background-color: gray;
 }
 
 .information-wrapper {
-    padding-block: 40px;
+    padding-block: 50px;
 }
 
 .information-wrapper h2 {
     font-size: 36px;
     font-weight: 900;
-    color: #1f2937;
+    color: var(--dark-background);
     text-align: center;
 }
 
 .card-wrapper {
     margin-block: 30px;
-    display: flex;
-    justify-content: center;
     column-gap: 30px;
 }
 
@@ -128,23 +135,20 @@ body {
 .card .image {
     width: 100%;
     height: 200px;
-    border: 5px solid #3882f6;
+    border: 5px solid var(--primary);
     border-radius: 20px;
 }
 
 .card p {
     font-size: 20px;
-    color: #6d747e;
+    color: gray;
     text-align: center;
     margin-top: 6px;
 }
 
 .testimonial {
-    background-color: #e5e7eb;
+    background-color: var(--whitish-gray);
     height: 400px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .testimonial blockquote {
@@ -155,7 +159,7 @@ body {
     font-size: 36px;
     font-style: italic;
     font-weight: 300;
-    color: #1f2937;
+    color: var(--dark-background);
 }
 
 .testimonial blockquote cite {
@@ -164,25 +168,18 @@ body {
     font-size: 24px;
     font-style: normal;
     font-weight: 500;
-    color: #1f2937;
+    color: var(--dark-background);
 }
 
 .cta-wrapper {
     height: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .cta {
-    width: 1100px;
-    background-color: #3882f6;
+    background-color: var(--primary);
     color: #fff;
     padding: 50px 130px;
     border-radius: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
 footer {
